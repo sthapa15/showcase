@@ -112,8 +112,8 @@
     box-shadow:5px 5px 0 var(--ink);transition:transform .2s,box-shadow .2s;font-family:inherit;padding:0;
   }
   .card:hover{transform:translate(-3px,-3px);box-shadow:10px 10px 0 var(--ink)}
-  .card .thumb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Fraunces',serif;font-size:1.2rem;text-align:center;padding:18px}
-  .card img.thumb{object-fit:cover}
+  .card .thumb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Fraunces',serif;font-size:1.2rem;text-align:center;padding:18px;overflow:hidden}
+  .card img.thumb{width:100%;height:100%;object-fit:contain;object-position:center}
   .card:nth-child(4n+1) .thumb{background:linear-gradient(135deg,var(--pink),var(--orange))}
   .card:nth-child(4n+2) .thumb{background:linear-gradient(135deg,var(--blue),#9c6bff)}
   .card:nth-child(4n+3) .thumb{background:linear-gradient(135deg,#0f9d76,var(--lime));color:var(--ink)}
@@ -149,10 +149,18 @@
   #about p.body em{font-style:italic;color:var(--pink)}
   .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
   .skills span{border:2px solid var(--cream);padding:8px 16px;font-size:.85rem}
-  .portrait{aspect-ratio:1;border:3px solid var(--cream);background:
+  .portrait{width:min(450px,100%);aspect-ratio:1;border:3px solid var(--cream);background:
     repeating-linear-gradient(-45deg,transparent,transparent 16px,rgba(255,255,255,.05) 16px,rgba(255,255,255,.05) 18px),
     linear-gradient(135deg,var(--pink),var(--blue));
-    display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-size:.9rem;object-fit:cover}
+    display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;font-size:.9rem;overflow:hidden;}
+  .portrait img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: 30% 45%;
+    display: block;
+  
+  }
 
   /* contact */
   #contact{text-align:center;padding:14vh 6vw}
@@ -177,7 +185,7 @@
   <div class="blob b3"></div>
 
   <nav>
-    <span class="logo">Smritee✦</span>
+    <span class="logo">Smritee</span>
     <div class="links">
       <a href="#work">Work</a>
       <a href="#about">About</a>
@@ -190,8 +198,8 @@
     <div class="hero-row">
       <div class="hero-text">
         <span class="eyebrow">Digital Media Creative</span>
-        <h1><span class="word">Ideas</span> <span class="word">that</span> <span class="word"><em>move</em></span> people.</h1>
-        <p class="sub">Hi, I'm <b>Smritee</b> — a multidisciplinary creative crafting visuals, motion, and stories that make brands impossible to scroll past.</p>
+        <h1>Hi, I'm <em>Smritee</em></h1>
+        <p class="sub"> a multidisciplinary creative crafting visuals, motion, and stories that make brands impossible to scroll past.</p>
         <div class="cta">
           <a href="#work" class="btn btn-primary">See my work</a>
           <a href="#contact" class="btn btn-ghost">Let's talk</a>
@@ -199,7 +207,7 @@
       </div>
       <!-- SPLASH IMAGE: replace this whole div with <img src="your-photo.jpg" class="splash-img" alt="Smritee"> -->
       <div class="splash-img">
-        <span><b>Your splash<br>photo here</b>Drop a portrait or a favourite piece of work.<br>(replace this block with an &lt;img&gt;)</span>
+        <span><b>Your splash<br>photo here</b>Drop a portrait or a favourite piece of work.<br>(replace this block with an <img>)</span>
       </div>
     </div>
   </section>
@@ -214,7 +222,7 @@
   <section id="work">
     <div class="reveal">
       <p class="sec-tag">Selected Work</p>
-      <h2 class="sec-head">Explore by category ✦</h2>
+      <h2 class="sec-head">Explore by category </h2>
       <p style="max-width:48ch;color:#57544a">Click a category to open its gallery. Click any piece to see the details.</p>
     </div>
 
@@ -244,7 +252,7 @@
                 data-desc="A short write-up: the brief, your idea, and the result. What was the goal and what did you make?"
                 data-facts="Instagram|Reels|Brand X|2025"
                 data-link="#"
-                data-img="">
+                data-img="images/social/WCsample.png">
                 <div class="thumb">Campaign One</div>
                 <div class="meta"><h4>Campaign One</h4><p>Instagram campaign</p></div>
               </button>
@@ -267,7 +275,45 @@
         </div>
       </div>
 
-      <!-- ========== CATEGORY: FLYERS ========== -->
+ 
+
+      <!-- ========== CATEGORY: PRINT MATERIALS ========== -->
+      <div class="cat">
+        <button class="cat-head" aria-expanded="false">
+          <span class="cat-title">
+            <span>
+              <h3>Print Materials</h3>
+              <span class="cat-desc">Brochures, collateral, packaging, and other printed work.</span>
+            </span>
+            <span class="count">2 pieces</span>
+          </span>
+          <span class="cat-plus">+</span>
+        </button>
+        <div class="cat-body">
+          <div class="cat-inner">
+            <div class="grid">
+              <button class="card"
+                data-title="Brochure Design" data-cat="Print Materials"
+                data-desc="Print edition of Iris, a student writer and artist-run feminist magazine."
+                data-facts="Magazine|Print|2024" data-link="https://drive.google.com/file/d/1nCnZb9BJacI-bQsV4UQ1UC259Vzt-F3h/view?usp=sharing"
+                data-link-text="click here to view full layout"
+                data-img="images/print-materials/image.png">
+                <img class="thumb" src="images/print-materials/image.png" alt="Print brochure thumbnail">
+                <div class="meta"><h4>Brochure Design</h4><p>Event collateral</p></div>
+              </button>
+              <button class="card"
+                data-title="Packaging Concept" data-cat="Print Materials"
+                data-desc="Packaging art and dielines designed for a product launch or limited edition release."
+                data-facts="Packaging|Print|2024" data-link="#" data-img="">
+                <div class="thumb">Packaging Concept</div>
+                <div class="meta"><h4>Packaging Concept</h4><p>Product packaging</p></div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+           <!-- ========== CATEGORY: FLYERS ========== -->
       <div class="cat">
         <button class="cat-head" aria-expanded="false">
           <span class="cat-title">
@@ -283,11 +329,11 @@
           <div class="cat-inner">
             <div class="grid">
               <button class="card"
-                data-title="Flyer One" data-cat="Flyers"
-                data-desc="Event or promotion this flyer was made for. Note the style, print specs, or turnaround."
-                data-facts="Event Poster|Print + Digital|2025" data-link="#" data-img="">
-                <div class="thumb">Flyer One</div>
-                <div class="meta"><h4>Flyer One</h4><p>Event poster</p></div>
+                data-title="Spooky Soiree" data-cat="Flyers"
+                data-desc="Halloween event flyer with bold typography and playful ghosts."
+                data-facts="Event Poster|Digital|2024" data-link="#" data-img="images/flyers/Spooky Soiree.png">
+                <img class="thumb" src="images/flyers/Spooky Soiree.png" alt="Spooky Soiree flyer">
+                <div class="meta"><h4>Spooky Soiree</h4><p>Halloween event flyer</p></div>
               </button>
               <button class="card"
                 data-title="Flyer Two" data-cat="Flyers"
@@ -307,14 +353,39 @@
           </div>
         </div>
       </div>
-
-      <!-- ========== CATEGORY: NEWSLETTERS ========== -->
+      <!-- ========== CATEGORY: REPORTS AND PRESENTATIONS ========== -->
       <div class="cat">
         <button class="cat-head" aria-expanded="false">
           <span class="cat-title">
             <span>
-              <h3>Newsletters</h3>
-              <span class="cat-desc">Email design &amp; editorial layouts people actually read.</span>
+              <h3>Reports and Presentations</h3>
+              <span class="cat-desc">Reports, presentations, worksheets, and classroom assets.</span>
+            </span>
+            <span class="count">1 piece</span>
+          </span>
+          <span class="cat-plus">+</span>
+        </button>
+        <div class="cat-body">
+          <div class="cat-inner">
+            <div class="grid">
+              <button class="card"
+                data-title="Study Guide" data-cat="Reports and Presentations"
+                data-desc="A polished study guide layout designed for easy in-class reference and review."
+                data-facts="Worksheet|Print|2026" data-link="#" data-img="images/academic-materials/study-guide.png">
+                <img class="thumb" src="images/academic-materials/study-guide.png" alt="Study Guide thumbnail">
+                <div class="meta"><h4>Study Guide</h4><p>Classroom resource</p></div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ========== CATEGORY: DIGITAL ART ========== -->
+      <div class="cat">
+        <button class="cat-head" aria-expanded="false">
+          <span class="cat-title">
+            <span>
+              <h3>Digital Art</h3>
+              <span class="cat-desc">Illustration, digital painting, concept art, and visual experiments.</span>
             </span>
             <span class="count">2 pieces</span>
           </span>
@@ -324,18 +395,18 @@
           <div class="cat-inner">
             <div class="grid">
               <button class="card"
-                data-title="Newsletter One" data-cat="Newsletters"
-                data-desc="What publication or brand? Note platform (Mailchimp, Substack, etc.) and open/click results if you have them."
-                data-facts="Mailchimp|Monthly|2025" data-link="#" data-img="">
-                <div class="thumb">Newsletter One</div>
-                <div class="meta"><h4>Newsletter One</h4><p>Monthly edition</p></div>
+                data-title="Digital Portrait" data-cat="Digital Art"
+                data-desc="A stylized digital portrait created as part of a character concept series."
+                data-facts="Portrait|Digital|2026" data-link="#" data-img="">
+                <div class="thumb">Digital Portrait</div>
+                <div class="meta"><h4>Digital Portrait</h4><p>Character concept</p></div>
               </button>
               <button class="card"
-                data-title="Newsletter Two" data-cat="Newsletters"
-                data-desc="Describe this newsletter — audience, design approach, results."
-                data-facts="Substack|Editorial|2024" data-link="#" data-img="">
-                <div class="thumb">Newsletter Two</div>
-                <div class="meta"><h4>Newsletter Two</h4><p>Editorial layout</p></div>
+                data-title="Scene Illustration" data-cat="Digital Art"
+                data-desc="A detailed digital scene design exploring mood, color, and composition."
+                data-facts="Illustration|Digital|2025" data-link="#" data-img="">
+                <div class="thumb">Scene Illustration</div>
+                <div class="meta"><h4>Scene Illustration</h4><p>Digital artwork</p></div>
               </button>
             </div>
           </div>
@@ -355,16 +426,16 @@
         <p class="body">I turn <em>ideas into eye-candy</em> — blending design, motion, and storytelling to make work that feels alive. I care about craft, curiosity, and making people feel something.</p>
         <div class="skills">
           <span>Adobe Creative Suite</span>
-          <span>Figma</span>
-          <span>After Effects</span>
-          <span>Premiere Pro</span>
-          <span>Photography</span>
+          <span>Canva</span>
+          <span>Digital Accessibility</span>
           <span>Social Strategy</span>
           <span>Brand Design</span>
         </div>
       </div>
       <!-- Optional: replace .portrait with <img src="you.jpg" class="portrait" alt="Smritee"> -->
-      <div class="portrait reveal"><span>A photo of you<br>or your studio ✦</span></div>
+      <div class="portrait reveal">
+        <img src="images/edited-round-2-1.jpg" alt="A photo of you or your studio">
+      </div>
     </div>
   </section>
 
@@ -372,7 +443,7 @@
   <section id="contact" class="reveal">
     <p class="sec-tag" style="color:var(--pink)">Contact</p>
     <h2>Let's make<br>something <em>bold.</em></h2>
-    <a class="mail" href="mailto:thapa.sukriti@gmail.com">thapa.sukriti@gmail.com</a>
+    <a class="mail" href="mailto:smritee.th@gmail.com">smritee.th@gmail.com</a>
     <div class="socials">
       <!-- Replace # with your real profile links -->
       <a href="#">Instagram</a>
@@ -448,7 +519,13 @@
       const s=document.createElement('span');s.textContent=f;mFacts.appendChild(s);
     });
     const link=card.getAttribute('data-link');
-    if(link&&link!=='#'){mLink.href=link;mLink.style.display='inline-block';}else{mLink.style.display='none';}
+    if(link&&link!=='#'){
+      mLink.href=link;
+      mLink.textContent=card.getAttribute('data-link-text')||'View project ↗';
+      mLink.style.display='inline-block';
+    }else{
+      mLink.style.display='none';
+    }
     modal.classList.add('on');document.body.style.overflow='hidden';
   }
   function closeModal(){modal.classList.remove('on');document.body.style.overflow='';}
