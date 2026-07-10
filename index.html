@@ -114,10 +114,8 @@
   .card:hover{transform:translate(-3px,-3px);box-shadow:10px 10px 0 var(--ink)}
   .card .thumb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Fraunces',serif;font-size:1.2rem;text-align:center;padding:18px;overflow:hidden}
   .card img.thumb{width:100%;height:100%;object-fit:contain;object-position:center}
-  .card:nth-child(4n+1) .thumb{background:linear-gradient(135deg,var(--pink),var(--orange))}
-  .card:nth-child(4n+2) .thumb{background:linear-gradient(135deg,var(--blue),#9c6bff)}
-  .card:nth-child(4n+3) .thumb{background:linear-gradient(135deg,#0f9d76,var(--lime));color:var(--ink)}
-  .card:nth-child(4n+4) .thumb{background:linear-gradient(135deg,var(--orange),#ffcf3f);color:var(--ink)}
+  .card:nth-child(odd) .thumb{background:linear-gradient(135deg,var(--pink),#c96dd8)}
+  .card:nth-child(even) .thumb{background:linear-gradient(135deg,var(--blue),#a855f7)}
   .card .meta{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:var(--cream);border-top:3px solid var(--ink)}
   .card .meta h4{font-size:.98rem;font-weight:700}
   .card .meta p{font-size:.78rem;color:#57544a}
@@ -157,7 +155,7 @@
     width:100%;
     height:100%;
     object-fit: cover;
-    object-position: 30% 45%;
+    object-position: 70% 45%;
     display: block;
   
   }
@@ -199,16 +197,13 @@
       <div class="hero-text">
         <span class="eyebrow">Digital Media Creative</span>
         <h1>Hi, I'm <em>Smritee</em></h1>
-        <p class="sub"> a multidisciplinary creative crafting visuals, motion, and stories that make brands impossible to scroll past.</p>
+        <p class="sub"> a multidisciplinary creative crafting eye-catching visuals for social impact events and campaigns.</p>
         <div class="cta">
           <a href="#work" class="btn btn-primary">See my work</a>
           <a href="#contact" class="btn btn-ghost">Let's talk</a>
         </div>
       </div>
-      <!-- SPLASH IMAGE: replace this whole div with <img src="your-photo.jpg" class="splash-img" alt="Smritee"> -->
-      <div class="splash-img">
-        <span><b>Your splash<br>photo here</b>Drop a portrait or a favourite piece of work.<br>(replace this block with an <img>)</span>
-      </div>
+      <img src="images/grad.jpg" class="splash-img" alt="Smritee graduation portrait">
     </div>
   </section>
 
@@ -221,7 +216,7 @@
   <!-- ===================== WORK / CATEGORY ACCORDION ===================== -->
   <section id="work">
     <div class="reveal">
-      <p class="sec-tag">Selected Work</p>
+      <p class="sec-tag">Selected Works</p>
       <h2 class="sec-head">Explore by category </h2>
       <p style="max-width:48ch;color:#57544a">Click a category to open its gallery. Click any piece to see the details.</p>
     </div>
@@ -234,9 +229,9 @@
           <span class="cat-title">
             <span>
               <h3>Social Media</h3>
-              <span class="cat-desc">Campaigns, posts &amp; reels that stop the scroll.</span>
+            
             </span>
-            <span class="count">3 pieces</span>
+            <span class="count">4 pieces</span>
           </span>
           <span class="cat-plus">+</span>
         </button>
@@ -246,29 +241,43 @@
               <!-- PROJECT CARD — data-* attributes fill the detail popup.
                    To use a real image: set data-img="social1.jpg" (relative path) — it becomes the thumb + modal image.
                    Set data-link to the live post/campaign URL. Duplicate a button block to add more. -->
+  
               <button class="card"
-                data-title="Campaign One"
+                data-title="Wellness Wednesday" data-cat="Social Media"
+                data-desc="Instagram post promoting weekly giveaways for student wellness."
+                data-facts="Instagram|Canva|2024" 
+                data-link="#" 
+                data-img="images/social/Wellness Wednesday Grid Post (1).png">
+                <div class="thumb">Wellness Wednesday</div>
+                <div class="meta"><h4>Wellness Wednesday</h4>
+              </button>
+               <button class="card"
+                data-title="Hats Off"
                 data-cat="Social Media"
-                data-desc="A short write-up: the brief, your idea, and the result. What was the goal and what did you make?"
-                data-facts="Instagram|Reels|Brand X|2025"
+                data-desc="An Instagram post for a fundraising campaign in honor of 50 years since the first co-ed graduating class at the University of Virginia."
+                data-facts="Instagram|Canva|2024"
                 data-link="#"
-                data-img="images/social/WCsample.png">
-                <div class="thumb">Campaign One</div>
-                <div class="meta"><h4>Campaign One</h4><p>Instagram campaign</p></div>
+                data-img="images/social/Hat Campaign Posts (1).png">
+                <div class="thumb">Hats Off</div>
+                <div class="meta"><h4>Hats Off</h4>
               </button>
               <button class="card"
-                data-title="Campaign Two" data-cat="Social Media"
-                data-desc="Describe this piece — concept, tools, outcome, engagement numbers if you have them."
-                data-facts="TikTok|Short-form video|2025" data-link="#" data-img="">
-                <div class="thumb">Campaign Two</div>
-                <div class="meta"><h4>Campaign Two</h4><p>Short-form video</p></div>
+                data-title="Student Spotlight" data-cat="Social Media"
+                data-desc="Weekly post spotlighting student intern"
+                data-facts="Instagram|Canva|2024" 
+                data-link="#" 
+                data-img="images/social/New Student Spotlight  (3).png">
+                <div class="thumb">Student Spotlight</div>
+                <div class="meta"><h4>Student Spotlight</h4>
               </button>
               <button class="card"
-                data-title="Campaign Three" data-cat="Social Media"
-                data-desc="Describe this piece — concept, tools, outcome."
-                data-facts="Carousel|Graphic Design|2024" data-link="#" data-img="">
-                <div class="thumb">Campaign Three</div>
-                <div class="meta"><h4>Campaign Three</h4><p>Carousel design</p></div>
+                data-title="Minority Health Conference" data-cat="Social Media"
+                data-desc="Post to promote the Minority Health Conference, an event focused on health equity with the theme of Bridging the Digital Divide."
+                data-facts="Instagram|Canva|2025" 
+                data-link="#" 
+                data-img="images/social/MHC.png">
+                <div class="thumb">Minority Health Conference</div>
+                <div class="meta"><h4>Minority Health Conference</h4>
               </button>
             </div>
           </div>
@@ -283,7 +292,7 @@
           <span class="cat-title">
             <span>
               <h3>Print Materials</h3>
-              <span class="cat-desc">Brochures, collateral, packaging, and other printed work.</span>
+              
             </span>
             <span class="count">2 pieces</span>
           </span>
@@ -293,20 +302,22 @@
           <div class="cat-inner">
             <div class="grid">
               <button class="card"
-                data-title="Brochure Design" data-cat="Print Materials"
+                data-title="Iris MagazinePrint Layout" data-cat="Print Materials"
                 data-desc="Print edition of Iris, a student writer and artist-run feminist magazine."
-                data-facts="Magazine|Print|2024" data-link="https://drive.google.com/file/d/1nCnZb9BJacI-bQsV4UQ1UC259Vzt-F3h/view?usp=sharing"
+                data-facts="Magazine|Print|InDesign|2024" data-link="https://drive.google.com/file/d/1k7V3ogJlz7Tr9NrVbmIrhjTNrJH4ESSn/view?usp=sharing"
                 data-link-text="click here to view full layout"
-                data-img="images/print-materials/image.png">
-                <img class="thumb" src="images/print-materials/image.png" alt="Print brochure thumbnail">
-                <div class="meta"><h4>Brochure Design</h4><p>Event collateral</p></div>
+                data-img="images/print-materials/iris.png">
+                <img class="thumb" src="images/print-materials/iris.png" alt="Print brochure thumbnail">
+                <div class="meta"><h4>Iris Magazine Print Layout</h4>
               </button>
               <button class="card"
-                data-title="Packaging Concept" data-cat="Print Materials"
-                data-desc="Packaging art and dielines designed for a product launch or limited edition release."
-                data-facts="Packaging|Print|2024" data-link="#" data-img="">
-                <div class="thumb">Packaging Concept</div>
-                <div class="meta"><h4>Packaging Concept</h4><p>Product packaging</p></div>
+                data-title="Internship Brochure" data-cat="Print Materials"
+                data-desc="Informational brochure created to share student internship opportunities."
+                data-facts="Brochure|Print|InDesign|2023" data-link="https://drive.google.com/file/d/1h7U0ozA1ol7tDo6VjN3wwiSCHFbLs5HS/view?usp=sharing"
+                data-link-text="click here to view full brochure"
+                data-img="images/print-materials/joinourteam.png">
+                <div class="thumb">Intern Brochure</div>
+                <div class="meta"><h4>Internship Brochure</h4>
               </button>
             </div>
           </div>
@@ -319,73 +330,43 @@
           <span class="cat-title">
             <span>
               <h3>Flyers</h3>
-              <span class="cat-desc">Event &amp; promo posters with punchy layouts.</span>
+             
             </span>
-            <span class="count">3 pieces</span>
+            <span class="count">2 pieces</span>
           </span>
           <span class="cat-plus">+</span>
         </button>
         <div class="cat-body">
           <div class="cat-inner">
             <div class="grid">
+              <button class="card"
+                data-title="Women's Center Internships" data-cat="Flyers"
+                data-desc="Flyer promoting internship and leadership program applications."
+                data-facts="Flyer|Digital and Print|Canva|2024" 
+                data-link="#" 
+                data-img="images/flyers/ywlpmlp.png">
+                <img class="thumb" src="images/flyers/ywlpmlp.png" alt="Copy of Apply flyer">
+                <div class="meta"><h4>Women's Center Internships</h4>
+              </button>
               <button class="card"
                 data-title="Spooky Soiree" data-cat="Flyers"
-                data-desc="Halloween event flyer with bold typography and playful ghosts."
-                data-facts="Event Poster|Digital|2024" data-link="#" data-img="images/flyers/Spooky Soiree.png">
+                data-desc="Halloween event flyer for graduate school cohort social."
+                data-facts="Event Flyer|Digital|Canva|2024" data-link="#" data-img="images/flyers/Spooky Soiree.png">
                 <img class="thumb" src="images/flyers/Spooky Soiree.png" alt="Spooky Soiree flyer">
-                <div class="meta"><h4>Spooky Soiree</h4><p>Halloween event flyer</p></div>
-              </button>
-              <button class="card"
-                data-title="Flyer Two" data-cat="Flyers"
-                data-desc="Describe this flyer — concept and where it was used."
-                data-facts="Promo|A4|2024" data-link="#" data-img="">
-                <div class="thumb">Flyer Two</div>
-                <div class="meta"><h4>Flyer Two</h4><p>Promo flyer</p></div>
-              </button>
-              <button class="card"
-                data-title="Flyer Three" data-cat="Flyers"
-                data-desc="Describe this flyer — concept and where it was used."
-                data-facts="Menu|Print|2024" data-link="#" data-img="">
-                <div class="thumb">Flyer Three</div>
-                <div class="meta"><h4>Flyer Three</h4><p>Menu design</p></div>
+                <div class="meta"><h4>Spooky Soiree</h4>
               </button>
             </div>
           </div>
         </div>
       </div>
-      <!-- ========== CATEGORY: REPORTS AND PRESENTATIONS ========== -->
-      <div class="cat">
-        <button class="cat-head" aria-expanded="false">
-          <span class="cat-title">
-            <span>
-              <h3>Reports and Presentations</h3>
-              <span class="cat-desc">Reports, presentations, worksheets, and classroom assets.</span>
-            </span>
-            <span class="count">1 piece</span>
-          </span>
-          <span class="cat-plus">+</span>
-        </button>
-        <div class="cat-body">
-          <div class="cat-inner">
-            <div class="grid">
-              <button class="card"
-                data-title="Study Guide" data-cat="Reports and Presentations"
-                data-desc="A polished study guide layout designed for easy in-class reference and review."
-                data-facts="Worksheet|Print|2026" data-link="#" data-img="images/academic-materials/study-guide.png">
-                <img class="thumb" src="images/academic-materials/study-guide.png" alt="Study Guide thumbnail">
-                <div class="meta"><h4>Study Guide</h4><p>Classroom resource</p></div>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <!-- ========== CATEGORY: DIGITAL ART ========== -->
       <div class="cat">
         <button class="cat-head" aria-expanded="false">
           <span class="cat-title">
             <span>
               <h3>Digital Art</h3>
-              <span class="cat-desc">Illustration, digital painting, concept art, and visual experiments.</span>
+             
             </span>
             <span class="count">2 pieces</span>
           </span>
@@ -396,17 +377,58 @@
             <div class="grid">
               <button class="card"
                 data-title="Digital Portrait" data-cat="Digital Art"
-                data-desc="A stylized digital portrait created as part of a character concept series."
-                data-facts="Portrait|Digital|2026" data-link="#" data-img="">
-                <div class="thumb">Digital Portrait</div>
-                <div class="meta"><h4>Digital Portrait</h4><p>Character concept</p></div>
+                data-desc="Converted a hand-drawn sketch by a middle school student into a digital version that was printed on t-shirts for a youth leadership program."
+                data-facts="Photoshop|Illustrator|Digital|2023" 
+                data-link="#" 
+                data-img="images/digital-art/YWLPShirt23.png">
+                <div class="thumb">Digital Sketch</div>
+                <div class="meta"><h4>Digital Sketch</h4>
               </button>
               <button class="card"
-                data-title="Scene Illustration" data-cat="Digital Art"
-                data-desc="A detailed digital scene design exploring mood, color, and composition."
-                data-facts="Illustration|Digital|2025" data-link="#" data-img="">
-                <div class="thumb">Scene Illustration</div>
-                <div class="meta"><h4>Scene Illustration</h4><p>Digital artwork</p></div>
+                data-title="Cat Illustration" data-cat="Digital Art"
+                data-cat= "Digital Art"
+                data-desc="Digital illustration made from photo of cats, used to embroider a gift for a friend."
+                data-facts="|Notability|Illustration|Digital|2025" 
+                data-link="#" 
+                data-thumb="images/digital-art/lucymello.png"
+                data-img="images/digital-art/lucymelloresults.png">
+                <div class="thumb">Cat Illustration</div>
+                <div class="meta"><h4>Cat Illustration</h4>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+            <!-- ========== CATEGORY: REPORTS AND PRESENTATIONS ========== -->
+      <div class="cat">
+        <button class="cat-head" aria-expanded="false">
+          <span class="cat-title">
+            <span>
+              <h3>Reports and Presentations</h3>
+             
+            </span>
+            <span class="count">2 pieces</span>
+          </span>
+          <span class="cat-plus">+</span>
+        </button>
+        <div class="cat-body">
+          <div class="cat-inner">
+            <div class="grid">
+              <button class="card"
+                data-title="Visual Report" data-cat="Reports and Presentations"
+                data-desc="A visual report summarizing community partnerships, projects, and accomplishments over a four-year period. Cover page shown, full report not available to the public."
+                data-facts="Report|Print|InDesign|2026" 
+                data-link="#" 
+                data-img="images/reports-and-presentations/EJ Clinic.png">
+                <img class="thumb" src="images/reports-and-presentations/EJ Clinic.png" alt="Visual Report thumbnail">
+                <div class="meta"><h4>Visual Report</h4>
+              </button>
+              <button class="card"
+                data-title="Poster Presentation" data-cat="Reports and Presentations"
+                data-desc="Poster presentation I created for a team project in graduate course: Systems Approaches to Understanding Public Health Issues."
+                data-facts="Poster|Digital|Canva|2025" data-link="#" data-img="images/reports-and-presentations/CHILD6_Alisa_Poster.png">
+                <img class="thumb" src="images/reports-and-presentations/CHILD6_Alisa_Poster.png" alt="Poster Presentation thumbnail">
+                <div class="meta"><h4>Poster Presentation</h4>
               </button>
             </div>
           </div>
@@ -423,18 +445,19 @@
     <div class="about-grid">
       <div class="reveal">
         <p class="sec-tag">About</p>
-        <p class="body">I turn <em>ideas into eye-candy</em> — blending design, motion, and storytelling to make work that feels alive. I care about craft, curiosity, and making people feel something.</p>
+        <p class="body">For as long as I can remember, I've been drawn to <em>storytelling through art-</em> whether that's painting, dancing, making music, or creating digital media. My goal is to make work that inspires positive action. I'm especially interested in how creativity intersects with social justice.</p>
         <div class="skills">
           <span>Adobe Creative Suite</span>
           <span>Canva</span>
           <span>Digital Accessibility</span>
           <span>Social Strategy</span>
+          <span>Social Impact Marketing</span>
           <span>Brand Design</span>
         </div>
       </div>
       <!-- Optional: replace .portrait with <img src="you.jpg" class="portrait" alt="Smritee"> -->
       <div class="portrait reveal">
-        <img src="images/edited-round-2-1.jpg" alt="A photo of you or your studio">
+        <img src="images/museum.jpg" alt="A photo of you or your studio">
       </div>
     </div>
   </section>
@@ -442,18 +465,15 @@
   <!-- ===================== CONTACT ===================== -->
   <section id="contact" class="reveal">
     <p class="sec-tag" style="color:var(--pink)">Contact</p>
-    <h2>Let's make<br>something <em>bold.</em></h2>
+    <h2>Let's<br>make something<br><em>together.</em></h2>
     <a class="mail" href="mailto:smritee.th@gmail.com">smritee.th@gmail.com</a>
     <div class="socials">
       <!-- Replace # with your real profile links -->
-      <a href="#">Instagram</a>
-      <a href="#">Behance</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">Resume PDF</a>
+      <a href="https://www.linkedin.com/in/smriteethapa/">LinkedIn</a>
     </div>
   </section>
 
-  <footer>© <span id="yr"></span> Smritee — Designed &amp; built with love ✦</footer>
+  <footer>© <span id="yr"></span> Smritee</footer>
 
   <!-- ===================== DETAIL MODAL ===================== -->
   <div class="modal" id="modal">
@@ -494,13 +514,16 @@
 
   // fill thumbs that have a data-img
   document.querySelectorAll('.card').forEach(card=>{
-    const img=card.getAttribute('data-img');
-    if(img){
-      const t=card.querySelector('.thumb');
-      const el=document.createElement('img'); el.src=img; el.alt=card.getAttribute('data-title'); el.className='thumb';
-      t.replaceWith(el);
-    }
-  });
+  const thumb = card.getAttribute('data-thumb') || card.getAttribute('data-img');
+  if(thumb){
+    const t = card.querySelector('.thumb');
+    const el = document.createElement('img');
+    el.src = thumb;
+    el.alt = card.getAttribute('data-title');
+    el.className = 'thumb';
+    t.replaceWith(el);
+  }
+});
 
   // detail modal
   const modal=document.getElementById('modal');
